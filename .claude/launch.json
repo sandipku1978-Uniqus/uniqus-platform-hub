@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hub-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--port", "3010"],
+      "port": 3010,
+      "cwd": "C:/Users/SandipKhetan/OneDrive - Uniqus Consultech Inc/Desktop/uniqus-platform-hub"
+    }
+  ]
+}
