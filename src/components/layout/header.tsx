@@ -1,18 +1,25 @@
 "use client";
 
-import { Blocks } from "lucide-react";
+import Image from "next/image";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { useTheme } from "@/components/theme-provider";
 
 export function Header() {
+  const { theme } = useTheme();
+
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center">
-            <Blocks size={18} className="text-white" />
-          </div>
+          <Image
+            src={theme === "dark" ? "/logos/uniqus-logo-white.png" : "/logos/uniqus-logo-color.png"}
+            alt="Uniqus"
+            width={120}
+            height={42}
+            className="h-8 w-auto"
+          />
           <span className="text-lg font-semibold tracking-tight">
-            Uniqus <span className="text-brand-primary-light">Hub</span>
+            <span className="text-brand-primary-light">Hub</span>
           </span>
         </a>
 

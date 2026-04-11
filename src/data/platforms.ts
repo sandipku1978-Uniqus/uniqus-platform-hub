@@ -100,6 +100,20 @@ export const platforms: Platform[] = [
     icon: "BookOpen",
   },
   {
+    id: "tca-advisor",
+    name: "TCA Advisor",
+    tagline: "80 AI champions across 8 domains",
+    description:
+      "Topic Champion Advisor platform with 80 AI champions across Accounting, GRC, FRM, ESG, and more. Features consulting-grade memo generation, TL Studio, RAG knowledge base, and deep research via Claude Opus.",
+    url: "https://advisor-uniqus.vercel.app",
+    screenshot: "/screenshots/tca-advisor.png",
+    category: "Enterprise",
+    status: "Live",
+    techStack: ["Next.js", "Claude AI", "Prisma", "Supabase", "Railway"],
+    highlights: ["80 AI champions", "10 frameworks", "Memo & TL Studio"],
+    icon: "Trophy",
+  },
+  {
     id: "relatediq",
     name: "RelatedIQ",
     tagline: "Relationship intelligence platform",
@@ -172,9 +186,9 @@ export const platforms: Platform[] = [
 ];
 
 export const stats = {
-  totalPlatforms: 12,
-  livePlatforms: 8,
-  totalAIAgents: 42,
+  totalPlatforms: 13,
+  livePlatforms: 9,
+  totalAIAgents: 122,
   jurisdictions: 6,
 };
 
@@ -192,6 +206,7 @@ export const allTechStacks: string[] = [
   "EDGAR API",
   "Vercel KV",
   "Vercel",
+  "Railway",
 ];
 
 export const categories: PlatformCategory[] = [

@@ -15,6 +15,7 @@ import {
   LayoutDashboard,
   Sparkles,
   Compass,
+  Trophy,
 } from "lucide-react";
 import { CategoryBadge } from "@/components/ui/badge";
 import { StatusBadge } from "@/components/ui/status-badge";
@@ -33,6 +34,7 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
   LayoutDashboard,
   Sparkles,
   Compass,
+  Trophy,
 };
 
 const categoryGradients: Record<string, string> = {
@@ -47,17 +49,10 @@ export function PlatformCard({ platform }: { platform: Platform }) {
   const gradient = categoryGradients[platform.category] || categoryGradients.Enterprise;
   const maxChips = 3;
   const extraCount = platform.techStack.length - maxChips;
+  const isClickable = !!platform.url;
 
-  return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10, transition: { duration: 0.2 } }}
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.3 }}
-      className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden hover:border-border-hover hover:shadow-lg hover:shadow-brand-primary/5 transition-[border-color,box-shadow] duration-300"
-    >
+  const cardContent = (
+    <>
       {/* Screenshot / Gradient area */}
       <div
         className={`relative h-40 sm:h-44 bg-gradient-to-br ${gradient} flex items-center justify-center`}
@@ -71,6 +66,13 @@ export function PlatformCard({ platform }: { platform: Platform }) {
             <span className="text-sm font-medium text-muted px-3 py-1 rounded-full border border-border bg-card/80">
               Coming Soon
             </span>
+          </div>
+        )}
+        {isClickable && (
+          <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="w-8 h-8 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center border border-border">
+              <ExternalLink size={14} className="text-brand-primary-light" />
+            </div>
           </div>
         )}
       </div>
@@ -116,25 +118,47 @@ export function PlatformCard({ platform }: { platform: Platform }) {
           ))}
         </ul>
 
-        {/* Launch link */}
+        {/* Launch indicator */}
         <div className="mt-auto pt-4">
-          {platform.url ? (
-            <a
-              href={platform.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-primary-light hover:text-brand-primary transition-colors"
-            >
+          {isClickable ? (
+            <span className="inline-flex items-center gap-1.5 text-sm font-medium text-brand-primary-light group-hover:text-brand-primary transition-colors">
               Launch
               <ExternalLink size={14} />
-            </a>
+            </span>
           ) : (
-            <span className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground cursor-not-allowed">
+            <span className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground">
               Coming Soon
             </span>
           )}
         </div>
       </div>
-    </motion.div>
+    </>
   );
+
+  const motionProps = {
+    layout: true,
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -10, transition: { duration: 0.2 } },
+    whileHover: { y: -4 },
+    transition: { duration: 0.3 },
+    className:
+      "group flex flex-col rounded-2xl border border-border bg-card overflow-hidden hover:border-border-hover hover:shadow-lg hover:shadow-brand-primary/5 transition-[border-color,box-shadow] duration-300" +
+      (isClickable ? " cursor-pointer" : ""),
+  };
+
+  if (isClickable) {
+    return (
+      <motion.a
+        href={platform.url!}
+        target="_blank"
+        rel="noopener noreferrer"
+        {...motionProps}
+      >
+        {cardContent}
+      </motion.a>
+    );
+  }
+
+  return <motion.div {...motionProps}>{cardContent}</motion.div>;
 }

@@ -21,7 +21,7 @@ export function HeroSection() {
             Uniqus Platform Hub
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            12 platforms. 42+ AI agents. 6 jurisdictions.
+            13 platforms. 122+ AI agents. 6 jurisdictions.
             <br className="hidden sm:block" />
             The Uniqus product ecosystem — built by Sandip Khetan.
           </p>
