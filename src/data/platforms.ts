@@ -105,7 +105,7 @@ export const platforms: Platform[] = [
     tagline: "80 AI champions across 8 domains",
     description:
       "Topic Champion Advisor platform with 80 AI champions across Accounting, GRC, FRM, ESG, and more. Features consulting-grade memo generation, TL Studio, RAG knowledge base, and deep research via Claude Opus.",
-    url: "https://advisor-uniqus.vercel.app",
+    url: "https://uniqusnationaloffice.com",
     screenshot: "/screenshots/tca-advisor.png",
     category: "Enterprise",
     status: "Live",
@@ -156,18 +156,32 @@ export const platforms: Platform[] = [
     icon: "LayoutDashboard",
   },
   {
-    id: "uniqus-ai-platform",
-    name: "Uniqus AI Platform",
-    tagline: "Next-gen AI consulting platform",
+    id: "ai-controls-universe",
+    name: "AI Controls Universe",
+    tagline: "ICFR governance for AI agents",
     description:
-      "The next generation Uniqus AI Platform with advanced agentic capabilities for AI-native consulting — currently in active development.",
-    url: null,
-    screenshot: "/screenshots/uniqus-ai-platform.png",
-    category: "Early Stage",
-    status: "Coming Soon",
-    techStack: ["Next.js", "Claude AI", "Prisma"],
-    highlights: ["In development", "Advanced agentic AI"],
-    icon: "Sparkles",
+      "ICFR Governance Command Center for AI-enabled business processes. Inventory, assess, control, monitor, and audit AI agents across financial reporting — aligned to COSO 2026 GenAI guidance.",
+    url: "https://uniqus-ai-platform.vercel.app",
+    screenshot: "/screenshots/ai-controls-universe.png",
+    category: "Enterprise",
+    status: "Live",
+    techStack: ["Next.js", "Claude AI", "Prisma", "Supabase"],
+    highlights: ["38 pages", "34 Prisma models", "COSO 2026 aligned"],
+    icon: "Shield",
+  },
+  {
+    id: "polling-station",
+    name: "Polling Station",
+    tagline: "Live polls, real-time results",
+    description:
+      "Real-time polling platform with live vote counting, categories, admin panel, share functionality, and engaging confetti animations. Built for instant audience engagement.",
+    url: "https://polling-station.vercel.app",
+    screenshot: "/screenshots/polling-station.png",
+    category: "Personal",
+    status: "Live",
+    techStack: ["Next.js", "Supabase"],
+    highlights: ["Real-time voting", "Admin panel", "Live results"],
+    icon: "BarChart3",
   },
   {
     id: "uniqus-collateral-navigator",
@@ -186,8 +200,8 @@ export const platforms: Platform[] = [
 ];
 
 export const stats = {
-  totalPlatforms: 13,
-  livePlatforms: 9,
+  totalPlatforms: 15,
+  livePlatforms: 11,
   totalAIAgents: 122,
   jurisdictions: 6,
 };
