@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Uniqus Platform Hub — 12 AI-Powered Platforms",
+  title: "Uniqus Platform Hub — 15 AI-Powered Platforms",
   description:
-    "The Uniqus product ecosystem: 12 platforms, 42+ AI agents, 6 jurisdictions. IPO readiness, M&A due diligence, treasury management, and more — built by Sandip Khetan.",
+    "The Uniqus product ecosystem: 15 platforms, 122+ AI agents, 6 jurisdictions. IPO readiness, M&A due diligence, treasury management, and more — built by Sandip Khetan.",
   keywords: [
     "Uniqus",
     "Sandip Khetan",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Uniqus Platform Hub",
     description:
-      "12 AI-powered platforms. 42+ agents. 6 jurisdictions. The Uniqus product ecosystem.",
+      "15 AI-powered platforms. 122+ agents. 6 jurisdictions. The Uniqus product ecosystem.",
     type: "website",
     siteName: "Uniqus Platform Hub",
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Uniqus Platform Hub",
     description:
-      "12 AI-powered platforms. 42+ agents. 6 jurisdictions. The Uniqus product ecosystem.",
+      "15 AI-powered platforms. 122+ agents. 6 jurisdictions. The Uniqus product ecosystem.",
   },
 };
 
