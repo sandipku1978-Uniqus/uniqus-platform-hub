@@ -102,15 +102,15 @@ export const platforms: Platform[] = [
   {
     id: "tca-advisor",
     name: "TCA Advisor",
-    tagline: "80 AI champions across 8 domains",
+    tagline: "184 AI champions across 10 frameworks",
     description:
-      "Topic Champion Advisor platform with 80 AI champions across Accounting, GRC, FRM, ESG, and more. Features consulting-grade memo generation, TL Studio, RAG knowledge base, and deep research via Claude Opus.",
+      "Topic Champion Advisor platform with 184 AI champions across Accounting, GRC, FRM, ESG, and more. Features consulting-grade memo generation, TL Studio, RAG knowledge base, and deep research via Claude Opus.",
     url: "https://uniqusnationaloffice.com",
     screenshot: "/screenshots/tca-advisor.png",
     category: "Enterprise",
     status: "Live",
     techStack: ["Next.js", "Claude AI", "Prisma", "Supabase", "Railway"],
-    highlights: ["80 AI champions", "10 frameworks", "Memo & TL Studio"],
+    highlights: ["184 AI champions", "10 frameworks", "Memo & TL Studio"],
     icon: "Trophy",
   },
   {
@@ -184,6 +184,20 @@ export const platforms: Platform[] = [
     icon: "BarChart3",
   },
   {
+    id: "uniqus-crm",
+    name: "Uniqus CRM",
+    tagline: "AI-powered client relationship management",
+    description:
+      "Enterprise CRM for managing client relationships, deal pipelines, and engagement tracking across 6 consulting service lines with AI-driven contact intelligence, meeting prep, and weekly reviews.",
+    url: "https://uniqus-crm.vercel.app",
+    screenshot: "/screenshots/uniqus-crm.png",
+    category: "Enterprise",
+    status: "Live",
+    techStack: ["React", "Claude AI", "Supabase", "Vercel"],
+    highlights: ["6 service lines", "AI meeting prep", "Contact intelligence"],
+    icon: "Handshake",
+  },
+  {
     id: "uniqus-collateral-navigator",
     name: "Collateral Navigator",
     tagline: "Collateral intelligence engine",
@@ -200,9 +214,9 @@ export const platforms: Platform[] = [
 ];
 
 export const stats = {
-  totalPlatforms: 15,
-  livePlatforms: 11,
-  totalAIAgents: 122,
+  totalPlatforms: 16,
+  livePlatforms: 12,
+  totalAIAgents: 226,
   jurisdictions: 6,
 };
 

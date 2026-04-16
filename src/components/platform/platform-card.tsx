@@ -18,6 +18,7 @@ import {
   Trophy,
   Shield,
   BarChart3,
+  Handshake,
 } from "lucide-react";
 import { CategoryBadge } from "@/components/ui/badge";
 import { StatusBadge } from "@/components/ui/status-badge";
@@ -39,6 +40,7 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
   Trophy,
   Shield,
   BarChart3,
+  Handshake,
 };
 
 const categoryGradients: Record<string, string> = {
